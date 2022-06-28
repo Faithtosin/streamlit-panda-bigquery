@@ -1,0 +1,2 @@
+# requirements.txt
+pandas-gbq==0.17.6
