@@ -19,7 +19,8 @@ pandas_gbq.context.project = project_id
 # Uses st.experimental_memo to only rerun when the query changes or after 10 min.
 @st.experimental_memo(ttl=600)
 
-# Perform query.
+# Perform query. my project has a sample dataset and a shakespeare table 
+#Sample dataset can be found here https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=samples&t=shakespeare&page=table&_ga=2.198975974.872507850.1656341989-473429029.1653314600
 def run_query():
     sql = """SELECT * FROM `{0}.sample.shakespeare` LIMIT 10""".format(project_id)
     df = pandas_gbq.read_gbq(sql) 
